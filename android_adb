@@ -1,1 +1,5 @@
-一些国产手机插入mac os 系统中无法被识别，在命令行输入 system_profiler SPUSBDataType在, 然后将魅蓝note的vendor id 添加至 ~/.android/adb_usb.ini文件中，然后依次执行adb kill-server   adb start-server即可进入adb shell。上述中的vendor id也可以到mac os中的 左上角苹果图标->关于本机->系统报告->硬件->usb中找到魅蓝note相关的那个usb接口并查看厂商id(vendor id) 然后做上述相同操作即可。
+1.android adb device
+一些国产手机插入mac os 系统中无法被识别，在命令行输入 system_profiler SPUSBDataType在, 
+然后将魅蓝note的vendor id 添加至 ~/.android/adb_usb.ini文件中，然后依次执行adb kill-server   adb start-server
+即可进入adb shell。上述中的vendor id也可以到mac os中的 左上角苹果图标->关于本机->系统报告->硬件->usb中找到手机
+相关的那个usb接口并查看厂商id(vendor id) 然后做上述相同操作即可。
