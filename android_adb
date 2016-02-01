@@ -7,3 +7,6 @@
 miui
 缺getopt ,ssh,vim
 有getopts
+3.windows cygwin ssh
+package安装openssh openssl(默认安装),安装完毕ssh-host-config,就[yes/no]按需选,默认不用填,
+cygrunsrv --start sshd再重启动,ssh基础配置,**关闭默认防火墙**
