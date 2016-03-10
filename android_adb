@@ -7,9 +7,10 @@
 miui
 缺getopt ,ssh,vim
 有getopts
-3.windows cygwin ssh
+3.windows cygwin ssh/
 package安装openssh openssl(默认安装),安装完毕ssh-host-config,就[yes/no]按需选,默认不用填,
 cygrunsrv --start sshd再重启动,ssh基础配置,**关闭默认防火墙**
+wget rsync git 
 4 scp 命令选项
 -1  强制scp命令使用协议ssh1  -2  强制scp命令使用协议ssh2  -4  强制scp命令只使用IPv4寻址  -6  强制scp命令只使用IPv6寻址  
 -B  使用批处理模式（传输过程中不询问传输口令或短语）  -C  允许压缩。（将-C标志传递给ssh，从而打开压缩功能）  
