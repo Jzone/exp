@@ -3,14 +3,17 @@
 然后将魅蓝note的vendor id 添加至 ~/.android/adb_usb.ini文件中，然后依次执行adb kill-server   adb start-server
 即可进入adb shell。上述中的vendor id也可以到mac os中的 左上角苹果图标->关于本机->系统报告->硬件->usb中找到手机
 相关的那个usb接口并查看厂商id(vendor id) 然后做上述相同操作即可。
+
 2.android adb shell
 miui
 缺getopt ,ssh,vim
 有getopts
+
 3.windows cygwin ssh/
 package安装openssh openssl(默认安装),安装完毕ssh-host-config,就[yes/no]按需选,默认不用填,
 cygrunsrv --start sshd再重启动,ssh基础配置,**关闭默认防火墙**
 wget rsync git 
+
 4 scp 命令选项
 -1  强制scp命令使用协议ssh1  -2  强制scp命令使用协议ssh2  -4  强制scp命令只使用IPv4寻址  -6  强制scp命令只使用IPv6寻址  
 -B  使用批处理模式（传输过程中不询问传输口令或短语）  -C  允许压缩。（将-C标志传递给ssh，从而打开压缩功能）  
@@ -23,9 +26,11 @@ wget rsync git
 -o ssh_option  如果习惯于使用ssh_config(5)中的参数传递方式，   
 -P port  注意是大写的P, port是指定数据传输用到的端口号   
 -S program  指定加密传输时所使用的程序。此程序必须能够理解ssh(1)的选项。
+
 5 freebsd default csh to bash
 chsh USER -s SHELL
 chsh root -s /usr/local/bin/bash
+
 6 bash 返回数值
 > function f { local x=$(false 2>&1); echo $?; }
 > f
@@ -37,3 +42,12 @@ chsh root -s /usr/local/bin/bash
 > h
 1
 
+7 android ant ndk build
+1).android create 显示命令选项 
+2)分支1 ndk-build 编译jni文件，参考http://developer.android.com/ndk/guides/android_mk.html，ndk-demo（分支为origin/android-mk)
+  分支2 参考如上网址，Standalone Toolchain，编译放到lib文件里（没测试），可参考libuv
+3)ant debug，签名等等
+)复杂方法参考
+http://geosoft.no/development/android.html
+http://www.cnblogs.com/jk1001/archive/2010/08/05/1793216.html
+http://www.cnblogs.com/wujd/archive/2012/01/10/wujiandong-android-1.html
