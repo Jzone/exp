@@ -30,6 +30,15 @@ This concludes the sixth part of my Cygwin SSH server series.
 The next part, covers how to enable server logging through the use of syslog. 
 wget rsync git 
 
+scp different port(man ssh_config)
+# cat ~/.ssh/config
+Host 67.12.21.133
+  Port 6774
+Host 67.129.242.40
+  Port 6774
+http://askubuntu.com/questions/153960/scp-with-two-different-ports
+
+
 4 scp 命令选项
 -1  强制scp命令使用协议ssh1  -2  强制scp命令使用协议ssh2  -4  强制scp命令只使用IPv4寻址  -6  强制scp命令只使用IPv6寻址  
 -B  使用批处理模式（传输过程中不询问传输口令或短语）  -C  允许压缩。（将-C标志传递给ssh，从而打开压缩功能）  
