@@ -12,6 +12,22 @@ miui
 3.windows cygwin ssh/
 package安装openssh openssl(默认安装),安装完毕ssh-host-config,就[yes/no]按需选,默认不用填,
 cygrunsrv --start sshd再重启动,ssh基础配置,**关闭默认防火墙**
+防火墙配置
+http://techtorials.me/cygwin/security/
+edit /etc/sshd_config
+set port 8895
+http://techtorials.me/cygwin/configure-windows-firewall/
+“Windows Firewall with Advanced Security”, click on “Inbound Rules”.
+On the right hand-side under “Actions” and “Inbound Rules”, click on “New Rule…”.
+Select “Port” and then click on “Next >”.
+Select “TCP” and “Specific local ports:”.
+In the “Specific local ports:” field, type in the port you chose previously during part 3 of this series.
+If you have been following through my guides, verbatim, the port number to use is “8895”. 
+When you’re ready to continue, click “Next >”.
+For the name, give it something meaningful, such as the name of this service – “sshd” – feel free to also include a description to help you remember what this rule was for. 
+Click “Finish” to open the port.
+This concludes the sixth part of my Cygwin SSH server series. 
+The next part, covers how to enable server logging through the use of syslog. 
 wget rsync git 
 
 4 scp 命令选项
