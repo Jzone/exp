@@ -1,0 +1,11 @@
+#set init
+export PGDATA="PATH_TO_YOUR_DATEBASE_CREATE"
+initdb
+pg_ctl -D $PGDATA -l logfile start #start the datebase
+
+#create datebas to login
+ psql -d template1
+ createdb
+ psql -h localhost
+ 
+ pg_ctl stop -D $PGDATA
