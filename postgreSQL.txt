@@ -8,4 +8,7 @@ pg_ctl -D $PGDATA -l logfile start #start the datebase
  createdb
  psql -h localhost
  
+ #show build option
+ pg_config --configure
+ 
  pg_ctl stop -D $PGDATA
