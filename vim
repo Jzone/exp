@@ -9,3 +9,5 @@
 -Run that from inside vim, that will apply your .vimrc
 -Alternately
 :source $MYVIMRC
+:so %
+if currently editing .vimrc
