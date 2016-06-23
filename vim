@@ -13,3 +13,26 @@
 :source $MYVIMRC
 :so %
 if currently editing .vimrc
+3.vim 排序
+:'<,'>!sort -n -k 2
+:h filter
+:sort /.*\%2v/
+:sort n /.*\s/
+－sort by second column
+(visual + !sort) 
+－sort by third column
+sort -k 3 
+－or
+:sort /.*\%3v/
+－Or
+－select the lines you wish to sort using the Capital V command. Then enter
+!sort -k 3n
+－or
+－the below code tells VIM to skip the first two words in every line and to sort on whatever follows:
+:%sort /^\S\+\s\+\S\+\s\+/ 
+－or
+－i.e. sort by 8th line
+:sort /.*\%55v/
+－The 'virtual' specification is the absolute column number, which treats spaces and tabs as a single character (in other words, it does NOT count tabs as 8 spaces (or whatever your tab settings are). 
+－sort by the last column
+:%sort /\<\S\+\>$/ r
