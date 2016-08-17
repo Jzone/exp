@@ -17,3 +17,5 @@ mac jni:
   https://www.chilkatsoft.com/java-loadLibrary-MacOSX.asp
   http://mrjoelkemp.com/2012/01/getting-started-with-jni-and-c-on-osx-lion/
   export JAVA_HOME=$(/usr/libexec/java_home)
+linux(rhel) jni
+  readlink -f `which java`
