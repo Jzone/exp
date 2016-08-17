@@ -13,3 +13,5 @@ emscripten:
   cd openssl-1.0.1j
   ./Configure -no-asm -no-apps android
   make
+mac jni:  
+  https://www.chilkatsoft.com/java-loadLibrary-MacOSX.asp
